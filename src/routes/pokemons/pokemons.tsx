@@ -12,6 +12,11 @@ export function Pokemons() {
   const [page, setPage] = useState(0);
   const [shownPokemons, setShownPokemons] = useState(pokemons?.slice(page * 10, (page + 1) * 10));
 
+  useEffect(() => {
+    if (page + 1 < buttons) {
+    }
+  }, [page]);
+
   //reset na pagina ao se alterar os parâmetros
   useEffect(() => setPage(0), [params]);
 
@@ -30,6 +35,7 @@ export function Pokemons() {
 
   //setando a pagina atual por dados vindo de um botão
   const handleSetPage = (page: number) => setPage(page);
+
   return (
     <>
       <Container>
@@ -39,6 +45,13 @@ export function Pokemons() {
             shownPokemons.map((pokemon) => <Pokemon key={pokemon.name} name={pokemon.name} imgUrl={pokemon.imgUrl} />)}
           {shownPokemons && (
             <ContainerButtons>
+              {/*Condicional para fixação do botão da pagina inicial*/}
+              {page > 1 && (
+                <>
+                  <Button onClick={() => handleSetPage(0)}>1</Button>
+                  <span>...</span>
+                </>
+              )}
               {Array(buttons)
                 .fill(1)
                 .map((button, index) => {
@@ -50,6 +63,13 @@ export function Pokemons() {
                     );
                   }
                 })}
+              {/*Condicional para fixação do botão da pagina final*/}
+              {page + 2 < buttons && (
+                <>
+                  <span>...</span>
+                  <Button onClick={() => handleSetPage(buttons - 1)}>{buttons}</Button>
+                </>
+              )}
             </ContainerButtons>
           )}
           {!shownPokemons && (

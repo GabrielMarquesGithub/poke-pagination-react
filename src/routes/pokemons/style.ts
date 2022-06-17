@@ -60,7 +60,7 @@ export const Loading = styled.div`
   }
 `;
 interface ButtonProps {
-  selected: boolean;
+  selected?: boolean;
 }
 export const Button = styled.button<ButtonProps>`
   border-radius: 50%;
@@ -93,6 +93,13 @@ export const ContainerButtons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  span {
+    top: 0.4rem;
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+  }
 `;
 export const ContainerPokemons = styled.div`
   margin-top: -6rem;
