@@ -26,7 +26,9 @@ html {
 }
 body {
   height: 100vh;
+  
   background: linear-gradient(-80deg, var(--light-blue), var(--dark-blue));
+  
   //em navegadores baseados no chrome o 'antialiased' torna as fontes mais nítidas
   -webkit-font-smoothing: antialiased;
 }

@@ -37,7 +37,8 @@ export const BackgroundDisable = styled.div<AnimationProps>`
   opacity: ${(props) => (props.open ? "0.5" : "0")};
 `;
 export const ContainerIconMenu = styled.div<AnimationProps>`
-  animation: ${(props) => (props.open ? ExpandAnimation : ShrinkAnimation)} 1s forwards;
+  animation: ${(props) => (props.open ? ExpandAnimation : ShrinkAnimation)} 1s
+    forwards;
   position: relative;
   z-index: 3;
 
@@ -83,7 +84,8 @@ const VanishAnimation = keyframes`
     }
 `;
 export const ContainerMenu = styled.div<AnimationProps>`
-  animation: ${(props) => (props.open ? ApearAnimation : VanishAnimation)} 1s forwards;
+  animation: ${(props) => (props.open ? ApearAnimation : VanishAnimation)} 1s
+    forwards;
   position: absolute;
   z-index: 2;
   left: 0;

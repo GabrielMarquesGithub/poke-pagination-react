@@ -13,8 +13,7 @@ const AnimationImg = keyframes`
 `;
 export const Container = styled.div`
   cursor: pointer;
-
-  max-width: 165px;
+  width: 165px;
 
   display: flex;
   flex-direction: column;
@@ -46,5 +45,14 @@ export const Container = styled.div`
     img {
       animation: ${AnimationImg} 0.6s infinite;
     }
+  }
+
+  @media (max-width: 750px) {
+    width: 120px;
+    height: 10rem;
+  }
+  @media (max-width: 560px) {
+    width: 200px;
+    height: 15rem;
   }
 `;

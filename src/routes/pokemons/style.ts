@@ -1,7 +1,14 @@
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-  width: 95vw;
+  margin-left: auto;
+  width: 100vw;
+  padding: 0 10rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 `;
 const LoadingAnimation = keyframes`
 0%{
@@ -15,13 +22,8 @@ const LoadingAnimation = keyframes`
 }
 `;
 export const Loading = styled.div`
-  margin-right: 5rem;
-  margin-left: auto;
-  height: 90vh;
-
-  width: 70vw;
-
-  display: grid;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -63,9 +65,9 @@ interface ButtonProps {
   selected?: boolean;
 }
 export const Button = styled.button<ButtonProps>`
-  border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 2rem;
   margin: 0 0.4rem;
   box-shadow: 2px 2px 10px black;
 
@@ -85,31 +87,29 @@ export const Button = styled.button<ButtonProps>`
 `;
 export const ContainerButtons = styled.div`
   height: 3rem;
-  width: 100%;
-
-  align-self: end;
-  grid-column: 1/6;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   span {
     top: 0.4rem;
     position: relative;
     color: white;
-    font-size: 1.5rem;
   }
 `;
 export const ContainerPokemons = styled.div`
   margin-top: -6rem;
-  margin-right: 5rem;
-  margin-left: auto;
-  height: 90vh;
 
-  width: 70vw;
+  max-width: 1100px;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
   gap: 2rem;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 930px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 560px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
