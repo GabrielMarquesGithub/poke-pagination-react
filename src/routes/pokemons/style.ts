@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
 `;
 const LoadingAnimation = keyframes`
@@ -97,6 +98,7 @@ export const ContainerButtons = styled.div`
 export const ContainerPokemons = styled.div`
   margin-top: -6rem;
 
+  height: 75vh;
   max-width: 1100px;
 
   display: grid;

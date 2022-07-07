@@ -28,6 +28,8 @@ body {
   height: 100vh;
   
   background: linear-gradient(-80deg, var(--light-blue), var(--dark-blue));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   
   //em navegadores baseados no chrome o 'antialiased' torna as fontes mais nítidas
   -webkit-font-smoothing: antialiased;
