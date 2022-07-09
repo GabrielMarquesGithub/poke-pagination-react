@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Pokemon } from "../../components/pokemon";
 import { SearchBox } from "../../components/searchBox";
@@ -36,6 +36,8 @@ export function Pokemons() {
       //lendo o array e retornando items que que retornam true para o include
       pokemons?.filter((poke) => poke.name.includes(searchValue))
     );
+    //reset para se a pesquisa for iniciada em pagina diferente da inicial
+    setPage(0);
   }, [searchValue, pokemons]);
 
   //seta os pokemons recebidos da api com a utilização dos parâmetros
