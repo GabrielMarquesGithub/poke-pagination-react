@@ -6,8 +6,8 @@ Você pode acessar a versão implantada deste projeto [aqui](https://heroic-dief
 
 ## Imagens
 
-![Imagem da página inicial do projeto](https://github.com/NikisGabriel/poke-pagination-react/tree/main/documents/poke-pagination-react)
-![Imagem do menu de navegação aberto](https://github.com/NikisGabriel/poke-pagination-react/tree/main/documents/poke-pagination-react-menu.png)
+![Imagem da página inicial do projeto](https://github.com/NikisGabriel/poke-pagination-react/blob/main/documents/poke-pagination-react)
+![Imagem do menu de navegação aberto](https://github.com/NikisGabriel/poke-pagination-react/blob/main/documents/poke-pagination-react-menu.png)
 
 ## Pré-requisitos
 
